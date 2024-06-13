@@ -29,7 +29,7 @@ To start the development server locally, use:
 This command will compile the application and start it on your local machine.
 
 Alternatively, you can view the deployed application directly on GitHub Pages:
-[View Hearth Take Home - Relationship History](<github_pages_link>)
+[View Hearth Take Home - Relationship History](https://nbrandon62.github.io/hearth-contact-history/)
 
 ## Planning Process
 To see the initial planning and design of the application, refer to the Excalidraw diagram:
