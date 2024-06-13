@@ -1,0 +1,61 @@
+.canvas-container {
+  height: 80vh;
+  width: 100%;
+  background-color: var(--white-200);
+  background-image: linear-gradient(to right, #ccc 1px, transparent 1px),
+    linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: 35px 35px;
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.overlay-form {
+  position: fixed;
+  top: 0;
+  right: -40%;
+  width: 40%;
+  height: 100vh;
+  background-color: white;
+  transition: right 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.overlay-form.open {
+  right: 0;
+}
+
+.event-item-container:last-child {
+  margin-right: 120px;
+}
+
+.event-item-container:before {
+  content: '';
+  position: absolute;
+  top: 150px;
+  left: 10%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 10px;
+  border-color: transparent transparent transparent black;
+  transform: translateY(-50%);
+}
+
+.event-item-container:after {
+  content: '';
+  position: absolute;
+  top: 150px;
+  left: -37px; /* Adjust positioning to overlap with the tail of :before */
+  width: 24%;
+  height: 2px; /* Height of the tail */
+  background-color: black; /* Color of the tail */
+  transform: translateY(-50%);
+}
+.event-item-container.first:before,
+.event-item-container.first:after{
+  display: none;
+}

@@ -2,32 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+    --white: #fffdfb;
+    --white-200: #fffcf5;
+    --gray: #ccc;
+    --gray-200: #b6b6b6;
+    --gray-400: #808080;
+}
+h1{
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+label {
+  font-weight: bold;
+  display: flex;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+input[type='date'],
+input[type='text'] {
+  padding: 0.65rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--gray-200);
+  background-color: var(--white);
+  color: var(--gray-800);
+  border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+input[type='text'] {
+  width: 100%;
+}
+
+input:focus {
+  border: 2px solid black;
+}
+
+input:invalid,
+.error {
+  color: #ff7d87;
+}
+
+button {
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+  line-height: initial;
+  transition: background-color 200ms ease-in-out, border 200ms ease-in-out,
+    transform 200ms ease-in-out;
+  user-select: none;
+  background-color: rgb(255, 153, 0);
+}
+
+button:disabled {
+  opacity: 60%;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: tomato;
+}
+
+button:focus-visible {
+  border-color: black;
 }
